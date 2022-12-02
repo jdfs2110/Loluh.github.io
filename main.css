@@ -22,30 +22,6 @@ body{
     margin-right: 100px;
     border-radius: 5px;
 }
-nav{
-    z-index: 1;
-    background-color: transparent;
-    max-height: 37px;
-    margin-left: 20px;
-    margin-bottom: 2px;
-}
-
-header{
-    text-align: left;
-    padding: 0px;
-    width: 100%;
-    background-color: transparent;
-    margin-left: 20px;
-}
-
-footer{
-    margin-top: auto;
-    background-color: rgb(199, 229, 229, .8);
-    padding: 10px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
 main{
     background-color: rgb(199, 229, 229, .8);
     min-height: 100vh;
