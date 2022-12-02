@@ -3,7 +3,10 @@
 }
 
 html{   
-    background: no-repeat url("./media/imagen1.jpg");
+    background: no-repeat url("./media/imagen1.jpg") center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover; 
 }
 
@@ -49,10 +52,22 @@ main{
     border-radius: 10px;
     min-width: 100vh;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
-#bloq{
-    background: transparent;
-    display:block;
-    height: 100px;
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: rgb(199, 229, 229, .8);
+}
+  
+::-webkit-scrollbar-thumb {
+    background: rgb(126, 146, 146);
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(86, 99, 99);
 }
