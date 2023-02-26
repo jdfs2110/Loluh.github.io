@@ -96,23 +96,19 @@ body{
 
 #backsquare1{
     background-color: rgba(35, 35, 53, 0.7);
-    animation: backsquare1 20s linear infinite alternate;
+    animation: backsquare1 20s linear infinite alternate, rotate 20s linear infinite alternate;
 }
 #backsquare2{
     background-color: rgba(46, 46, 70, 0.5);
-    animation: backsquare2 20s linear infinite alternate;
+    animation: backsquare2 20s linear infinite alternate, rotate 20s linear infinite alternate;
 }
 #backsquare3{
     background-color: rgba(35, 35, 53, 0.7);
-    animation: backsquare3 20s linear infinite alternate;
+    animation: backsquare3 20s linear infinite alternate, rotate 20s linear infinite alternate;
 }
 #backsquare4{
     background-color: rgba(46, 46, 70, 0.5);
-    animation: backsquare4 20s linear infinite alternate;
-}
-#backsquare5{
-    background-color: rgba(35, 35, 53, 0.7);
-    animation: backsquare5 20s linear infinite alternate;
+    animation: backsquare4 20s linear infinite alternate, rotate 20s linear infinite alternate;
 }
 
 @keyframes rotate {
@@ -180,21 +176,6 @@ body{
         left: 100%;
         width: 60vh;
         height: 60vh;
-    }
-}
-
-@keyframes backsquare5 {
-    from {
-        top: 30%;
-        right: 100%;
-        width: 60vh;
-        height: 60vh;
-    }
-    to {
-        top: 90%;
-        right: 100%;
-        width: 40vh;
-        height: 40vh;
     }
 }
 

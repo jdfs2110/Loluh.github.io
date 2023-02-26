@@ -37,4 +37,3 @@ function resetSquare4() {
   let square1 = document.getElementById('square4');
   square1.style.transform = "translate(-50%, -50%) rotate(0deg)";
 }
-
