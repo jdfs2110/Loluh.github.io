@@ -97,4 +97,6 @@ body{
 
 .buttonMain:hover{
     transform: scale(1.1);
+    background-color: rgb(87, 87, 163);
+    color: rgb(26, 26, 39);
 }
