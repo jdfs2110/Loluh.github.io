@@ -126,10 +126,10 @@ body{
 
 @keyframes backsquare1 {
     from {
-        top: 10%;
-        left: 10%;
+        top: 0%;
+        left: 0%;
         width: 50vh;
-        height: 50vh
+        height: 50vh;
     }
     to {
         top: 100%;
@@ -144,11 +144,11 @@ body{
         bottom: 100%;
         left: 100%;
         width: 40vh;
-        height: 40vh
+        height: 40vh;
     }
     to {
-        bottom: 10%;
-        left: 10%;
+        bottom: 0%;
+        left: 0%;
         width: 60vh;
         height: 60vh;
     }
@@ -158,11 +158,11 @@ body{
         top: 100%;
         left: 100%;
         width: 50vh;
-        height: 50vh
+        height: 50vh;
     }
     to {
-        top: 10%;
-        left: 10%;
+        top: 0%;
+        left: 0%;
         width: 75vh;
         height: 75vh;
     }
@@ -170,10 +170,10 @@ body{
 
 @keyframes backsquare4 {
     from {
-        bottom: 10%;
-        left: 10%;
+        bottom: 0%;
+        left: 0%;
         width: 40vh;
-        height: 40vh
+        height: 40vh;
     }
     to {
         bottom: 100%;
@@ -188,7 +188,7 @@ body{
         top: 30%;
         right: 100%;
         width: 60vh;
-        height: 60vh
+        height: 60vh;
     }
     to {
         top: 90%;
