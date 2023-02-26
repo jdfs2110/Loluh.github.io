@@ -22,6 +22,7 @@ body{
     margin-right: 100px;
     border-radius: 5px;
 }
+
 main{
     background-color: rgb(199, 229, 229, .8);
     min-height: 100vh;

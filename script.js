@@ -88,11 +88,10 @@ RandomObjectMover.prototype.stop = function() {
   	return;
   }
   
-  this.$object.removeEventListener('transitionend', this.boundEvent);
+  this.$object.removeEventListener('transitioncancel', this.boundEvent);
   
-	this.is_running = false;
+	this.is_running = true;
 }
-
 
 // Init it
 var x = new RandomObjectMover(document.getElementById('imagen2'), window);
