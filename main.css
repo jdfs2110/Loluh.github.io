@@ -225,9 +225,3 @@ body{
         margin-top: 20%;
     }
 }
-
-@media (orientation: landscape){
-    html{
-        transform: rotate(90deg);
-      }
-}
