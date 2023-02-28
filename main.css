@@ -22,6 +22,9 @@ body{
     position: absolute;
 }
 
+
+
+
 .bgIndexCenterSquares{
     z-index: -1;
     display: flex;
@@ -34,8 +37,8 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 200px;
-    width: 200px;
+    height: 20vh;
+    width: 20vh;
     background-color: rgb(38, 38, 58, 0.5);
     z-index: -1;
     transition: .5s;
@@ -46,8 +49,8 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 400px;
-    width: 400px;
+    height: 40vh;
+    width: 40vh;
     background-color: rgb(55, 55, 85, 0.5);
     z-index: -2;
     transition: .5s;
@@ -58,8 +61,8 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 600px;
-    width: 600px;
+    height: 60vh;
+    width: 60vh;
     background-color: rgb(38, 38, 58, 0.5);
     z-index: -3;
     transition: .5s;
@@ -70,8 +73,8 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 800px;
-    width: 800px;
+    height: 80vh;
+    width: 80vh;
     background-color: rgb(55, 55, 85, 0.5);
     z-index: -4;
     transition: .5s;
@@ -201,4 +204,24 @@ body{
     transform: scale(1.1);
     background-color: rgb(87, 87, 163);
     color: rgb(26, 26, 39);
+}
+
+@media (max-width: 768px){
+    .principal{
+        min-height: auto;
+    }
+    .path{
+        position: unset;
+        margin-top: 50%;
+    }
+    .buttons{
+        flex-direction: column;
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 769px) and (max-width:1200px){
+    .buttons{
+        margin-top: 20%;
+    }
 }
