@@ -3,7 +3,10 @@
 *{
     font-family: 'Montserrat', sans-serif;
 }
-
+:root{
+    --width: 110%;
+    --widthNegative: -110%;
+}
 body{
     background-color: rgb(38, 38, 58);
     overflow: hidden;
@@ -65,39 +68,40 @@ main{
     animation: squareEven 10s linear infinite;
 }
 
+
 @keyframes squareOdd{
     0%{
-        transform: translateX(-110%);
+        transform: translateX(var(--widthNegative));
     }
     25%{
         transform: translateX(0);
     }
     50%{
-        transform: translateX(110%);
+        transform: translateX(var(--width));
     }
     75%{
         transform: translateX(0);
     }
     100%{
-        transform: translateX(-110%);
+        transform: translateX(var(--widthNegative));
     }
 }
 
 @keyframes squareEven{
     0%{
-        transform: translateX(110%);
+        transform: translateX(var(--width));
     }
     25%{
         transform: translateX(0);
     }
     50%{
-        transform: translateX(-110%);
+        transform: translateX(var(--widthNegative));
     }
     75%{
         transform: translateX(0);
     }
     100%{
-        transform: translateX(110%);
+        transform: translateX(var(--width));
     }
 }
 
@@ -113,39 +117,8 @@ main{
 }
 
 @media screen and (min-width: 768px){
-    @keyframes squareOdd{
-        0%{
-            transform: translateX(-115vh);
-        }
-        25%{
-            transform: translateX(0);
-        }
-        50%{
-            transform: translateX(115vh);
-        }
-        75%{
-            transform: translateX(0);
-        }
-        100%{
-            transform: translateX(-115vh);
-        }
-    }
-    
-    @keyframes squareEven{
-        0%{
-            transform: translateX(115vh);
-        }
-        25%{
-            transform: translateX(0);
-        }
-        50%{
-            transform: translateX(-115vh);
-        }
-        75%{
-            transform: translateX(0);
-        }
-        100%{
-            transform: translateX(115vh);
-        }
+    :root{
+        --width: 120vh;
+        --widthNegative: -120vh;
     }
 }
