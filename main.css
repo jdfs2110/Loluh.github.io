@@ -39,6 +39,9 @@ main{
     color: rgb(87, 87, 163);
     padding: 10px;
     transition: .5s;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .buttons a:hover{
