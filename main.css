@@ -120,8 +120,34 @@ main{
 }
 
 @media screen and (min-width: 768px){
-    :root{
-        --width: 120vh;
-        --widthNegative: -120vh;
+    .bg .square:first-child, .bg .square:nth-child(3), .bg .square:last-child{
+        animation-duration: 30s;
+        width: 100vw;
+    }
+    .bg .square:nth-child(2), .bg .square:nth-child(4){
+        animation-duration: 30s;
+        width: 100vw;
+    }
+    @keyframes squareOdd{
+        0%{
+            transform: translateX(-100vw);
+        }
+        50%{
+            transform: translateX(100vw);
+        }
+        100%{
+            transform: translateX(-100vw);
+        }
+    }
+    @keyframes squareEven{
+        0%{
+            transform: translateX(100vw);
+        }
+        50%{
+            transform: translateX(-100vw);
+        }
+        100%{
+            transform: translateX(100vw);
+        }
     }
 }
