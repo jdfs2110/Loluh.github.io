@@ -30,14 +30,14 @@ main h1{
 }
 
 
-/* .transition-buttons{
+.transition-buttons{
     transition: 1000ms;
     opacity: 1;
 }
 
 html.is-animating .transition-buttons{
     opacity: 0;
-} */
+}
 
 .buttons{
     display: flex;
@@ -70,14 +70,14 @@ html.is-animating .transition-buttons{
     scale: 1.1;
 }
 
-/* .transition-bg{
+.transition-bg{
     transition: 1000ms;
     opacity: 1;
 }
 
 html.is-animating .transition-bg{
     opacity:0;
-} */
+}
 
 .bg{
     position: absolute;
@@ -181,7 +181,7 @@ html.is-animating .transition-bg{
     }
 }
 
-/* @media screen and (min-width: 1800px){
+@media screen and (min-width: 1800px){
     .transition-lolu{
         transition: 1000ms;
         transform: translateY(0) translateX(0) scale(1);
@@ -190,7 +190,7 @@ html.is-animating .transition-bg{
     html.is-animating .transition-lolu{
         transform: translateY(-42svh) translateX(-85svh) scale(0.5);
     }
-} */
+}
 
 /* skins.html */
 
