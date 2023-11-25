@@ -11,55 +11,38 @@
     <title>Skins</title>
 </head>
 <body>
-    <header id="header">
-        <h1 class="h1-skins">Lolu</h1>
-        <div class="buttons-skins">
-            <a href="./" target="_self">Start</a>
-            <!-- <a href="">About me</a>
-            <a href="">Socials</a> -->
-        </div>
-    </header>
-    <main id="swup" class="skins-main transition-web">
-        <!-- Initial content -->
-        <div class="skins">
-            <div class="skin">
-                <img src="/skinsfiles/images/skin-nik-std.gif" alt="skin-nik-std">
-                <h2>STD SKIN</h2>
-                <h2><a href="/skinsfiles/files/-_NikolajPikolaj_-_Lolu_STD.osk" download="">DOWNLOAD</a></h2>
+    <div id="swup">
+        <header id="header">
+            <h1 class="h1-skins">Lolu</h1>
+            <div class="buttons-skins">
+                <a href="./" target="_self">Start</a>
+                <!-- <a href="">About me</a>
+                <a href="">Socials</a> -->
             </div>
+        </header>
+        <main class="skins-main transition-web">
+            <!-- Initial content -->
             <div class="skins">
                 <div class="skin">
-                    <img src="/skinsfiles/images/skin-nik-dt.gif" alt="skin-nik-dt">
-                    <h2>DT SKIN</h2>
-                    <h2><a href="/skinsfiles/files/-_NikolajPikolaj_-_Lolu_DT.osk" download>DOWNLOAD</a></h2>
+                    <img src="/skinsfiles/images/skin-nik-std.gif" alt="skin-nik-std">
+                    <h2>STD SKIN</h2>
+                    <h2><a href="/skinsfiles/files/-_NikolajPikolaj_-_Lolu_STD.osk" download>DOWNLOAD</a></h2>
+                </div>
+                <div class="skins">
+                    <div class="skin">
+                        <img src="/skinsfiles/images/skin-nik-dt.gif" alt="skin-nik-dt">
+                        <h2>DT SKIN</h2>
+                        <h2><a href="/skinsfiles/files/-_NikolajPikolaj_-_Lolu_DT.osk" download>DOWNLOAD</a></h2>
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
-
+        </main>
+    </div>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const swup = new Swup({
-                plugins: [
-                    new SwupHeadPlugin(),
-                    new SwupPreloadPlugin(),
-                    new SwupTransitionPlugin({
-                        from: (pathname, element) => {
-                            return element && element.getAttribute('id') === 'swup';
-                        },
-                        to: (pathname, element) => {
-                            return element && element.getAttribute('id') === 'swup';
-                        },
-                        in: (next) => {
-                            document.getElementById('header').style.opacity = 0;
-                            next();
-                        },
-                        out: (next) => {
-                            document.getElementById('header').style.opacity = 1;
-                            next();
-                        },
-                    }),
-                ],
+                containers: ["#swup", "#header"], // Add the ID of the header container
+                animateHistoryBrowsing: true,
             });
         });
     </script>
