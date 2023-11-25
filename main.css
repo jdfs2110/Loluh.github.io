@@ -192,6 +192,7 @@ html.is-animating .transition-bg{
     }
 }
 
+
 /* skins.html */
 
 header{
@@ -279,3 +280,10 @@ header{
     color: rgb(31, 31, 75);
 }
 
+
+@media screen and (max-width: 800px){
+    .skin{
+        flex-direction: column;
+        gap: 2svh
+    }
+}
