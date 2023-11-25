@@ -40,8 +40,26 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const swup = new Swup({
-                containers: ["#swup", "#header"], // Add the ID of the header container
-                animateHistoryBrowsing: true,
+                plugins: [
+                    new SwupHeadPlugin(),
+                    new SwupPreloadPlugin(),
+                    new SwupTransitionPlugin({
+                        from: (pathname, element) => {
+                            return element && element.getAttribute('id') === 'swup';
+                        },
+                        to: (pathname, element) => {
+                            return element && element.getAttribute('id') === 'swup';
+                        },
+                        in: (next) => {
+                            document.getElementById('header').style.opacity = 0;
+                            next();
+                        },
+                        out: (next) => {
+                            document.getElementById('header').style.opacity = 1;
+                            next();
+                        },
+                    }),
+                ],
             });
         });
     </script>
