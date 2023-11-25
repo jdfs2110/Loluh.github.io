@@ -7,6 +7,7 @@
     --width: 110%;
     --widthNegative: -110%;
 }
+
 body{
     background-color: rgb(38, 38, 58);
     overflow: hidden;
@@ -14,10 +15,28 @@ body{
 
 main{
     display: flex;
-    min-height: 100vh;
+    min-height: 100svh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+main h1{
+    display: flex;
+    color: rgb(87, 87, 163);
+    font-size: 10svh;
+    margin-bottom: 1svh;
+    user-select: none;
+}
+
+
+.transition-buttons{
+    transition: 1000ms;
+    opacity: 1;
+}
+
+html.is-animating .transition-buttons{
+    opacity: 0;
 }
 
 .buttons{
@@ -29,7 +48,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(42, 42, 77);
+    background-color: rgb(31, 31, 75);
     width: 15vh;
     height: 3vh;
     margin-top: 10px;
@@ -47,7 +66,17 @@ main{
 .buttons a:hover{
     cursor: pointer;
     background-color: rgb(87, 87, 163);
-    color: rgb(42, 42, 77);
+    color: rgb(31, 31, 75);
+    scale: 1.1;
+}
+
+.transition-bg{
+    transition: 1000ms;
+    opacity: 1;
+}
+
+html.is-animating .transition-bg{
+    opacity:0;
 }
 
 .bg{
@@ -59,7 +88,7 @@ main{
 }
 
 .bg .square{
-    width: 45vh;
+    width: 100svh;
     height: 20vh;
     background-color:rgba(68, 68, 109, .2);
 }
@@ -151,3 +180,102 @@ main{
         }
     }
 }
+
+@media screen and (min-width: 1800px){
+    .transition-lolu{
+        transition: 1000ms;
+        transform: translateY(0) translateX(0) scale(1);
+    }
+
+    html.is-animating .transition-lolu{
+        transform: translateY(-42svh) translateX(-85svh) scale(0.5);
+    }
+}
+
+/* skins.html */
+
+header{
+    display: flex;
+    background-color: rgba(87, 87, 163, .1);
+    min-height: 10svh;
+    margin-top: -8px;
+    margin-left: -8px;
+    margin-right: -8px;
+    border-bottom: 10px solid rgb(87, 87, 163);
+    
+}
+
+.h1-skins{
+    display: flex;
+    color: rgb(87, 87, 163);
+    font-size: 5svh;
+    margin-bottom: 1svh;
+    user-select: none;
+    margin-top: 2.5svh;
+    margin-left: 2.5svh;
+}
+
+.buttons-skins{
+    display: flex;
+    flex-direction: row;
+    row-gap: 10svh;
+}
+
+.buttons-skins a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(31, 31, 75);
+    width: 10svh;
+    height: 3svh;
+    margin-left: 3svh;
+    margin-top: 3svh;
+    border-radius: 100px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(87, 87, 163);
+    padding: 10px;
+    transition: .5s;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.buttons-skins a:hover{
+    cursor: pointer;
+    background-color: rgb(87, 87, 163);
+    color: rgb(31, 31, 75);
+    scale: 1.1;
+}
+
+.skins-main{
+    min-height: 0;
+    flex-direction: column;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.skins{
+    min-width: 100%;
+}
+
+.skin{
+    display: inline-flex;
+    background-color: rgba(87, 87, 163, .3);
+    border: 1px solid rgba(87, 87, 163, .3);
+    border-radius: 10px;
+    color: rgb(31, 31, 75);
+    margin-left: 2%;
+    margin-top: 10px;
+    min-width: 50%;
+    gap: 10svh;
+    padding: 20px;
+}
+
+.skin img{
+    max-width: 30svh;
+}
+
+.skin h2 a{
+    color: rgb(31, 31, 75);
+}
+
