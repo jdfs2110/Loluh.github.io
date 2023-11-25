@@ -4,4 +4,4 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('swup:popstate', function () {
         location.reload();
     });
-});A
+});
