@@ -1,0 +1,61 @@
+---
+import Footer from "@/components/Footer.astro";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="Lolu">
+  <main>
+    <h1>Lolu</h1>
+    <div class="buttons">
+      <a draggable="false" target="_self" data-url="/skins">Skins</a>
+    </div>
+    <div class="bg transition-bg">
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+    </div>
+  </main>
+  <script
+    is:inline
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+  <script is:inline>
+    $(() => {
+      let count = 70;
+      $("#countdown-button").text(count);
+      $("footer button").on("click", function () {
+        count--;
+        $(this).text(count);
+        if (count === 0) {
+          window.location.href =
+            "/forbidden/forbidden/forbidden/forbidden/forbidden/tangerine";
+        }
+      });
+    });
+  </script>
+  <script is:inline>
+    $(() => {
+      $(".buttons a").on("click", function () {
+        var url = $(this).data("url");
+        $(".square").fadeOut(1100);
+        $("a").fadeOut(1000);
+        $("h1").animate(
+          {
+            left: "20",
+            top: "20",
+            fontSize: "3em",
+            fontSize: "5vh",
+          },
+          1100,
+          function () {
+            window.location.href = url;
+          },
+        );
+      });
+    });
+  </script>
+  <Footer />
+</Layout>

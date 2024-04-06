@@ -1,0 +1,161 @@
+---
+import Header from "@/components/Header.astro";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="Skins">
+  <Header />
+  <div id="header-insert"></div>
+  <main class="skins-main transition-web">
+    <section>
+      <article>
+        <h2>STD SKIN</h2>
+        <a href="/files/-_NikolajPikolaj_-_Lolu_STD.osk" download>DOWNLOAD</a>
+      </article>
+    </section>
+    <section>
+      <article>
+        <h2>DT SKIN</h2>
+        <a href="/files/-_NikolajPikolaj_-_Lolu_DT.osk" download>DOWNLOAD</a>
+      </article>
+    </section>
+  </main>
+  <script
+    is:inline
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+  <script is:inline>
+    $(() => {
+      $(".buttons-header a").on("click", function () {
+        var url = $(this).data("url");
+        if (url == "/") {
+          $("main, header").animate(
+            {
+              opacity: 0,
+            },
+            1100,
+          );
+          let viewportHeight = $(window).height();
+          let viewportWidth = $(window).width();
+          let h1Height = $("h1").outerHeight();
+          let h1Width = $("h1").outerWidth();
+          let topOffset = 115;
+          let leftOffset = 48;
+          let topPosition = viewportHeight / 2 - h1Height / 2 - topOffset;
+          let leftPosition = viewportWidth / 2 - h1Width / 2 - leftOffset;
+          $("h1").animate(
+            {
+              left: leftPosition + "px",
+              top: topPosition + "px",
+              fontSize: "10vh",
+            },
+            1100,
+            function () {
+              window.location.href = url;
+            },
+          );
+        } else {
+          window.location.href = url;
+        }
+      });
+    });
+  </script>
+</Layout>
+
+<style>
+  .socials {
+    position: fixed;
+    right: 0;
+    top: 10;
+  }
+
+  main {
+    height: calc(100dvh - 10dvh);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  main section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(87, 87, 163, 0.3);
+    align-items: center;
+    padding-top: 10px;
+  }
+
+  main a {
+    color: rgb(31, 31, 75);
+    transition: 200ms;
+  }
+
+  main a:hover {
+    color: rgb(59, 59, 126);
+    transform: scale(1.1);
+  }
+
+  main h2 {
+    color: rgb(31, 31, 75);
+    font-size: 36px;
+    margin-bottom: 1vh;
+    user-select: none;
+  }
+
+  main section:first-of-type {
+    background: url("../videos/nm.webm") center/cover no-repeat;
+  }
+
+  main section:last-of-type {
+    background: url("../videos/dt.webm") center/cover no-repeat;
+  }
+
+  main article {
+    width: 400px;
+    height: 100px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(87, 87, 163, 0.9);
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  main article h2 {
+    color: rgb(31, 31, 75);
+    font-size: 24px;
+    margin-top: 10px;
+    user-select: none;
+  }
+
+  main article a {
+    color: rgb(31, 31, 75);
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    main {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    section {
+      margin-bottom: 10px;
+    }
+
+    .socials {
+      bottom: 10px;
+      top: auto;
+      background-color: rgba(87, 87, 163, 0.9);
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    .socials a:first-of-type {
+      filter: contrast(0.5);
+    }
+  }
+</style>

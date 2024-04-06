@@ -1,0 +1,31 @@
+---
+import Discord from "@/icons/Discord.astro";
+import Osu from "@/icons/Osu.astro";
+import Twitch from "@/icons/Twitch.astro";
+import Twitter from "@/icons/Twitter.astro";
+import Youtube from "@/icons/Youtube.astro";
+---
+
+<footer>
+  <div class="socials">
+    <a href="https://www.twitch.tv/loluh_" target="_blank"><Twitch /></a>
+    <a href="https://twitter.com/Loluh_" target="_blank"><Twitter /></a>
+    <a href="https://www.youtube.com/@loluh" target="_blank"><Youtube /></a>
+    <a href="https://discord.gg/9YwKEHQg8b" target="_blank"><Discord /></a>
+    <a href="https://osu.ppy.sh/users/13204938" target="_blank"><Osu /> </a>
+  </div>
+  <button id="countdown-button"></button>
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  #countdown-button {
+    width: 32px;
+    height: 32px;
+  }
+</style>
